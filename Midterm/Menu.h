@@ -9,3 +9,5 @@ void drawmode(ObjLoader& obj);
 void ChangeSize(int w, int h);
 void ChangeSize2();
 void setglOrtho(ObjLoader& obj);
+
+void drawline();

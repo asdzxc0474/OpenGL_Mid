@@ -105,29 +105,26 @@ void menudraw()
     case 1:
         drawmode(gourd);
         setglOrtho(gourd);
-        ChangeSize2();
         break;
     case 2:
         drawmode(octahedron);
         setglOrtho(octahedron);
-        ChangeSize2();
         break;
     case 3:
         drawmode(teapot);
         setglOrtho(teapot);
-        ChangeSize2();
         break;
     case 4:
         drawmode(teddy);
         setglOrtho(teddy);
-        ChangeSize2();
         break;
     case 5:
         drawmode(testobj);
         setglOrtho(testobj);
-        ChangeSize2();
         break;
     }
+    drawline();
+    ChangeSize2();
     glutPostRedisplay();
 }
 
@@ -221,4 +218,23 @@ void ChangeSize2()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glutPostRedisplay();
+}
+void drawline()
+{
+    glLineWidth(2.0f);
+    glBegin(GL_LINES);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex3f(-100, 0, 0);
+    glVertex3f(100, 0, 0);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex3f(0, -100, 0);
+    glVertex3f(0, 100, 0);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex3f(0, 0, -100);
+    glVertex3f(0, 0, 100);
+    glEnd();
 }

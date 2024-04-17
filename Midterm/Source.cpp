@@ -28,9 +28,7 @@ int main(int argc, char** argv)
     glutInitWindowSize(400, 400);
     glutInitWindowPosition(600, 80);
     glutCreateWindow("Simple Triangle");
-
     glEnable(GL_DEPTH_TEST);
-
     glutReshapeFunc(ChangeSize);
     glutDisplayFunc(&RenderScene);
     glutKeyboardFunc(My_Keyboard);
@@ -105,7 +103,7 @@ void My_Keyboard(unsigned char key, int x, int y)
     }
     else if (key == 'd')
     {
-        z01 += 0.25f;
+        z01 += 1.0f;
     }
     else if (key == 'A')
     {
@@ -117,7 +115,7 @@ void My_Keyboard(unsigned char key, int x, int y)
     }
     else if (key == 'D')
     {
-        z01 -= 0.25f;
+        z01 -= 1.0f;
     }
     else if (key == 'i')
     {
